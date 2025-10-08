@@ -26,7 +26,8 @@ class Book :
 
     def chap():
         # print("title:" + self.title, "author:" + self.author, "subject:" + self.subject )
-        print(books)
+        for index, book in enumerate(books):
+            print(f"{index}. Title: {book.title}, Author: {book.author}, Subject: {book.subject}")
        
 
 # book1 = Book("rrrrrr", "tttttt", "kkkkkkkkkk")
