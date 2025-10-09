@@ -15,23 +15,33 @@ class Book :
         books.append(book)
 
     def remove():
-        x = input("enter a number of book")
-        books.remove(x)
+        Book.chap()
+        x = int(input("enter a number of book"))
+        books.pop(x - 1)
 
 
 
 
     def cheng():
-        pass
+        Book.chap()
+        x = int(input("enter a number of book: "))
+      
+        t = input("new Title: ")
+        s = input("new Subject: ")
+        a = input("new Author: ")
+
+        book = books[x-1]
+        book.title = t
+        book.author = a
+        book.subject = s
 
     def chap():
         # print("title:" + self.title, "author:" + self.author, "subject:" + self.subject )
         for index, book in enumerate(books):
-            print(f"{index}. Title: {book.title}, Author: {book.author}, Subject: {book.subject}")
+            print(f"{index +1}. Title: {book.title}, Author: {book.author}, Subject: {book.subject}")
        
 
-# book1 = Book("rrrrrr", "tttttt", "kkkkkkkkkk")
-# book1.chap()
+
 books = []
 while 1:
     i = input("1.add \n2.remove \n3.cheng\n4.list\n")
